@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smartherd.globofly">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FlyRetrofitComplete"
+       >
+        <activity
+            android:name="com.example.flyretrofitcomplete.ui.DestinationListActivity"
+            android:theme="@style/Theme.FlyRetrofitComplete"
+            android:label="Destination List"
+            />
+        <activity
+            android:name="com.example.flyretrofitcomplete.ui.DestinationDetailActivity"
+            android:label="Destination Detail"
+            android:theme="@style/Theme.FlyRetrofitComplete"
+            android:parentActivityName="com.example.flyretrofitcomplete.ui.DestinationListActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.flyretrofitcomplete.ui.DestinationListActivity" />
+        </activity>
+        <activity
+            android:name="com.example.flyretrofitcomplete.ui.DestinationCreateActivity"
+            android:label="New Destination"
+            android:theme="@style/Theme.FlyRetrofitComplete"
+
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.flyretrofitcomplete.ui.DestinationListActivity" />
+        </activity>
+        <activity
+            android:name="com.example.flyretrofitcomplete.ui.WelcomeActivity"
+            android:label="GloboFly"
+            android:theme="@style/Theme.FlyRetrofitComplete"
+
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
